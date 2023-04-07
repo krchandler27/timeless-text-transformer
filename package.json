@@ -1,5 +1,5 @@
 {
-  "name": "timeless-text-transformer",
+  "name": "JATE",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -12,7 +12,7 @@
     "client": ""
   },
   "keywords": [],
-  "author": "Katie Speakman",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
