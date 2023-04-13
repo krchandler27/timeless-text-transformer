@@ -1,5 +1,5 @@
 import { openDB } from 'idb';
-
+// Creates a new database called 'jate'
 const initdb = async () =>
   openDB('jate', 1, {
     upgrade(db) {
@@ -7,42 +7,36 @@ const initdb = async () =>
         console.log('jate database already exists');
         return;
       }
-      // Creates an object in which the data is stored and gives key name 'id' which increments automatically.
+      // Creates an object in which the data is stored and gives unique 'id' that auto-increments.
       db.createObjectStore('jate', { keyPath: 'id', autoIncrement: true });
       console.log('jate database created');
     },
   });
 
-// Export a function we will use to PUT to the database.
+// Put takes content typed into the text editor and adds it to the 'jate'Db
 export const putDb = async (content) => {
-  console.log('PUT to the database');
+  console.log('Add text to database. 👍');
 
   const jateDb = await openDB('jate', 1);
-
-  const tx = jateDb.transaction('jate', 'readwrite');
-
-  const store = tx.objectStore('jate');
-
-  const request = store.put({ id: 1, value: content });
-
-  // Get confirmation of the request.
+  const transact = jateDb.transaction('jate', 'readwrite');
+  const store = transact.objectStore('jate');
+  const request = store.put({ jate: content });
   const result = await request;
-  console.log('🚀 Saved to the jate database', result);
+  console.log('Text saved to the database. 👍', result);
 };
 
-// Export a function we will use to GET to the database.
+// Retrieves all saved text from the database.
 export const getDb = async () => {
-  console.log('GET from the database');
+  console.log('Operation GET from database');
 
   const jateDb = await openDB('jate', 1);
-  const tx = jateDb.transaction('jate', 'readonly')
-  const store = tx.objectStore('jate');
+  const transact = jateDb.transaction('jate', 'readonly')
+  const store = transact.objectStore('jate');
   const request = store.getAll();
-
-  // Confirmation of request.
   const result = await request;
   console.log('result.value', result);
   return result?.value;
+  console.log('Operation GET was a success.');
 };
 
 initdb();
