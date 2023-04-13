@@ -39,4 +39,5 @@ export const getDb = async () => {
   console.log('Operation GET was a success.');
 };
 
+//Call function to start the database
 initdb();

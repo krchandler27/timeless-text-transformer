@@ -18,14 +18,17 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
+      // Adds and generates HTML
       new HtmlWebpackPlugin({
         template: './index.html',
         title: 'J.A.T.E',
       }),
+      // Adds service worker with source and destination
       new InjectManifest({
         swSrc: './src-sw.js',
         swDest: 'src-sw.js',
       }),
+      // Creates manifest.json file
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
