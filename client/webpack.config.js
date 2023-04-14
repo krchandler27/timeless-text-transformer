@@ -22,6 +22,7 @@ module.exports = () => {
       new HtmlWebpackPlugin({
         template: './index.html',
         title: 'J.A.T.E',
+        favicon: "./src/favicon.gif",
       }),
       // Adds service worker with source and destination
       new InjectManifest({
@@ -41,7 +42,7 @@ module.exports = () => {
         publicPath: './',
         icons: [
           {
-            src: path.resolve('src/images/logo.png'),
+            src: path.resolve('src/images/favicon.png'),
             sizes: [96, 128, 192, 256, 384, 512],
             destination: path.join('assets', 'icons')
           },
