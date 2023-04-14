@@ -9,9 +9,11 @@
   - [License](#License)
 
 ## Project Description
-    Are you in search of a versatile text editor that can be used both on and offline? Look no further than J.A.T.E. Whether you're struck by a sudden wave of coding inspiration or you simply need a reliable tool to jot down your thoughts, J.A.T.E. has got you covered. With its user-friendly interface and powerful features, you'll be able to bring your coding dreams to life. Don't miss out on this amazing opportunity - click on the link below to check out J.A.T.E. today.
+Are you in search of a versatile text editor that can be used both on and offline? Look no further than J.A.T.E. Whether you're struck by a sudden wave of coding inspiration or you simply need a reliable tool to jot down your thoughts, J.A.T.E. has got you covered. With its user-friendly interface and powerful features, you'll be able to bring your coding dreams to life. Don't miss out on this amazing opportunity - click on the link below to check out J.A.T.E. today.
 
-  Deployed Heroku Link:  https://just-another-text-editor-215.herokuapp.com/
+ Deployed Heroku Link:  https://just-another-text-editor-215.herokuapp.com/
+
+![app heroku](https://user-images.githubusercontent.com/116527506/232090386-e7d5b3f5-92b0-45c9-90fd-b3e9a2b91a26.JPG)
 
 ## Usage Information
 
@@ -24,7 +26,7 @@
 
 ## Contributors
   n/a
-  
+
 ## Let's Connect
 Hi! My name is Katie Speakman. I hope you enjoyed checking out J.A.T.E. Let's connect!
 * Check out more of my projects: https://github.com/krchandler27
